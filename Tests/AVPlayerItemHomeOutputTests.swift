@@ -1,6 +1,6 @@
 //
 //  AVPlayerItemHomeOutputTests.swift
-//  AVPlayerItemHomeOutputTests
+//  AVPlayerItemHomeOutput
 //
 //  Created by Alex Rupérez on 14/5/17.
 //  Copyright © 2017 alexruperez. All rights reserved.
