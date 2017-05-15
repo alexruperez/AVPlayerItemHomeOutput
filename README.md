@@ -56,6 +56,10 @@ present(playerViewController, animated: true) {
 }
 ```
 
+#### Don't forget:
+
+Add NSHomeKitUsageDescription key to your Info.plist to specify the use of HomeKit in your app.
+
 ## Etc.
 
 * Contributions are very welcome.
