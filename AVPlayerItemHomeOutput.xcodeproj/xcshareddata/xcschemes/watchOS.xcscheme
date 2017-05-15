@@ -29,6 +29,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D56BEEC31EC8B6EB00B22A1A"
+               BuildableName = "AVPlayerItemHomeOutput.xctest"
+               BlueprintName = "Tests"
+               ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

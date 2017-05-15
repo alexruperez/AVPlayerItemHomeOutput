@@ -45,6 +45,7 @@
 		D56BEF6E1EC8C84900B22A1A /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF351EC8C31A00B22A1A /* HomeKit.framework */; };
 		D56BEF731EC8CF5700B22A1A /* AVPlayerItemHomeOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEEDE1EC8BAED00B22A1A /* AVPlayerItemHomeOutput.framework */; };
 		D56BEF741EC8CF5700B22A1A /* AVPlayerItemHomeOutput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEEDE1EC8BAED00B22A1A /* AVPlayerItemHomeOutput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D56BEF7C1EC997D000B22A1A /* Lenna.png in Resources */ = {isa = PBXBuildFile; fileRef = D56BEF7B1EC9979100B22A1A /* Lenna.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D56BEEDD1EC8BAED00B22A1A;
 			remoteInfo = iOS;
+		};
+		D56BEF791EC98A3900B22A1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56BEEB21EC8B6EB00B22A1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56BEF4C1EC8C70500B22A1A;
+			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -126,6 +134,7 @@
 		D56BEF601EC8C70500B22A1A /* AVPlayerItemHomeOutput.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPlayerItemHomeOutput.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56BEF641EC8C70500B22A1A /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		D56BEF6D1EC8C84900B22A1A /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		D56BEF7B1EC9979100B22A1A /* Lenna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lenna.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,10 +219,10 @@
 		D56BEF1E1EC8BBCB00B22A1A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D56BEF201EC8BBCB00B22A1A /* Info.plist */,
-				D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */,
-				D56BEF411EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift */,
 				D56BEF451EC8C4A800B22A1A /* HomeManager.swift */,
+				D56BEF411EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift */,
+				D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */,
+				D56BEF201EC8BBCB00B22A1A /* Info.plist */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -221,8 +230,9 @@
 		D56BEF211EC8BBCB00B22A1A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D56BEF231EC8BBCB00B22A1A /* Info.plist */,
 				D56BEF221EC8BBCB00B22A1A /* AVPlayerItemHomeOutputTests.swift */,
+				D56BEF7B1EC9979100B22A1A /* Lenna.png */,
+				D56BEF231EC8BBCB00B22A1A /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -246,10 +256,10 @@
 				D56BEF4F1EC8C70500B22A1A /* AppDelegate.swift */,
 				D56BEF511EC8C70500B22A1A /* ViewController.swift */,
 				D56BEF531EC8C70500B22A1A /* Main.storyboard */,
-				D56BEF561EC8C70500B22A1A /* Assets.xcassets */,
 				D56BEF581EC8C70500B22A1A /* LaunchScreen.storyboard */,
-				D56BEF5B1EC8C70500B22A1A /* Info.plist */,
+				D56BEF561EC8C70500B22A1A /* Assets.xcassets */,
 				D56BEF6D1EC8C84900B22A1A /* Example.entitlements */,
+				D56BEF5B1EC8C70500B22A1A /* Info.plist */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -303,6 +313,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D56BEF7A1EC98A3900B22A1A /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = AVPlayerItemHomeOutputTests;
@@ -417,6 +428,7 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Q6BEQCNWYM;
 						ProvisioningStyle = Automatic;
+						TestTargetID = D56BEF4C1EC8C70500B22A1A;
 					};
 					D56BEED51EC8BAC400B22A1A = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -489,6 +501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56BEF7C1EC997D000B22A1A /* Lenna.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +625,11 @@
 			isa = PBXTargetDependency;
 			target = D56BEEDD1EC8BAED00B22A1A /* iOS */;
 			targetProxy = D56BEF701EC8C87100B22A1A /* PBXContainerItemProxy */;
+		};
+		D56BEF7A1EC98A3900B22A1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56BEF4C1EC8C70500B22A1A /* Example */;
+			targetProxy = D56BEF791EC98A3900B22A1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -818,6 +836,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.AVPlayerItemHomeOutput.Tests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVPlayerItemHomeOutput.app/AVPlayerItemHomeOutput";
 			};
 			name = Debug;
 		};
@@ -829,6 +848,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.AVPlayerItemHomeOutput.Tests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVPlayerItemHomeOutput.app/AVPlayerItemHomeOutput";
 			};
 			name = Release;
 		};
@@ -970,6 +990,7 @@
 				D56BEED71EC8BAC400B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEEEF1EC8BAED00B22A1A /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
@@ -978,6 +999,7 @@
 				D56BEEF11EC8BAED00B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEEFF1EC8BB0400B22A1A /* Build configuration list for PBXNativeTarget "watchOS" */ = {
 			isa = XCConfigurationList;
@@ -986,6 +1008,7 @@
 				D56BEF011EC8BB0400B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEF181EC8BB1600B22A1A /* Build configuration list for PBXNativeTarget "tvOS" */ = {
 			isa = XCConfigurationList;
@@ -994,6 +1017,7 @@
 				D56BEF1A1EC8BB1600B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEF671EC8C70500B22A1A /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
@@ -1002,6 +1026,7 @@
 				D56BEF691EC8C70500B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEF6A1EC8C70500B22A1A /* Build configuration list for PBXNativeTarget "ExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -1010,6 +1035,7 @@
 				D56BEF6C1EC8C70500B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

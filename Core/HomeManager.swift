@@ -15,10 +15,13 @@ class HomeManager {
     private var primaryHome: HMHome? {
         return manager.primaryHome
     }
-    private var hasPrimaryHome: Bool {
+    var hasPrimaryHome: Bool {
         return primaryHome != nil
     }
-    private var updating = [HMCharacteristic: Bool]()
+    private var lightbulbServices: [HMService]? {
+        return primaryHome?.servicesWithTypes([HMServiceTypeLightbulb])
+    }
+    var updating = [HMCharacteristic: Bool]()
 
     func send(_ pixelBuffer: CVPixelBuffer, colors: UInt) {
         guard hasPrimaryHome && colors > 0 else {
@@ -31,7 +34,7 @@ class HomeManager {
             for j in 0..<colors {
                 var bitmap = [UInt8](repeating: 0, count: 4)
                 let context = CIContext()
-                let inputExtent = CIVector(x: extent.origin.x/CGFloat(colors*i), y: extent.origin.y/CGFloat(colors*j), z: extent.size.width/CGFloat(colors), w: extent.size.height/CGFloat(colors))
+                let inputExtent = CIVector(x: (extent.size.width/CGFloat(colors))*CGFloat(i), y: (extent.size.height/CGFloat(colors))*CGFloat(j), z: extent.size.width/CGFloat(colors), w: extent.size.height/CGFloat(colors))
                 let filter = CIFilter(name: "CIAreaAverage", withInputParameters: [kCIInputImageKey: image, kCIInputExtentKey: inputExtent])!
                 let outputImage = filter.outputImage!
                 let outputExtent = outputImage.extent
@@ -44,14 +47,13 @@ class HomeManager {
     }
 
     func send(_ colors: [UIColor]) {
-        guard let lightbulbServices = primaryHome?.servicesWithTypes([HMServiceTypeLightbulb]) else {
+        guard let lightbulbServices = lightbulbServices, colors.count > 0 else {
             return
         }
         var colorIndex = 0
         for lightbulbService in lightbulbServices {
             var HSBA = [CGFloat](repeating: 0, count: 4)
             colors[colorIndex % colors.count].getHue(&HSBA[0], saturation: &HSBA[1], brightness: &HSBA[2], alpha: &HSBA[3])
-            colorIndex += 1
             for characteristic in lightbulbService.characteristics {
                 if updating[characteristic] == nil {
                     updating[characteristic] = false
@@ -59,64 +61,42 @@ class HomeManager {
                 guard updating[characteristic] == false else {
                     break
                 }
-                if characteristic.characteristicType == HMCharacteristicTypePowerState, characteristic.value as? Bool != true {
-                    updating[characteristic] = true
-                    characteristic.writeValue(true, completionHandler: { error in
-                        if error != nil {
-                            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
-                                self?.updating[characteristic] = false
-                            })
-                        } else {
-                            self.updating[characteristic] = false
-                        }
-                    })
+                if characteristic.characteristicType == HMCharacteristicTypePowerState {
+                    update(characteristic, floatValue: 1)
                 }
-                if characteristic.characteristicType == HMCharacteristicTypeBrightness, characteristic.value as? CGFloat != HSBA[2] {
-                    let value = NSNumber(value: Int(Float(HSBA[2]) * (characteristic.metadata?.maximumValue?.floatValue ?? 100)))
-                    updating[characteristic] = true
-                    characteristic.writeValue(value, completionHandler: { error in
-                        if error != nil {
-                            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
-                                self?.updating[characteristic] = false
-                            })
-                        } else {
-                            self.updating[characteristic] = false
-                        }
-                    })
+                if characteristic.characteristicType == HMCharacteristicTypeBrightness {
+                    update(characteristic, floatValue: Float(HSBA[2]))
                 }
-                if characteristic.characteristicType == HMCharacteristicTypeSaturation, characteristic.value as? CGFloat != HSBA[1] {
-                    let value = NSNumber(value: Int(Float(HSBA[1]) * (characteristic.metadata?.maximumValue?.floatValue ?? 100)))
-                    updating[characteristic] = true
-                    characteristic.writeValue(value, completionHandler: { error in
-                        if error != nil {
-                            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
-                                self?.updating[characteristic] = false
-                            })
-                        } else {
-                            self.updating[characteristic] = false
-                        }
-                    })
+                if characteristic.characteristicType == HMCharacteristicTypeSaturation {
+                    update(characteristic, floatValue: Float(HSBA[1]))
                 }
-                if characteristic.characteristicType == HMCharacteristicTypeHue, characteristic.value as? CGFloat != HSBA[0] {
-                    let value = NSNumber(value: Int(Float(HSBA[0]) * (characteristic.metadata?.maximumValue?.floatValue ?? 100)))
-                    updating[characteristic] = true
-                    characteristic.writeValue(value, completionHandler: { error in
-                        if error != nil {
-                            DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
-                                self?.updating[characteristic] = false
-                            })
-                        } else {
-                            self.updating[characteristic] = false
-                        }
-                    })
+                if characteristic.characteristicType == HMCharacteristicTypeHue {
+                    update(characteristic, floatValue: Float(HSBA[0]))
                 }
             }
+            colorIndex += 1
         }
     }
 
 }
 
-private extension HomeManager {
+extension HomeManager {
+
+    func update(_ characteristic: HMCharacteristic, floatValue: Float) {
+        let value = NSNumber(value: Int(floatValue * (characteristic.metadata?.maximumValue?.floatValue ?? (floatValue > 1 ? 100 : 1))))
+        if characteristic.value as? Float != value.floatValue {
+            updating[characteristic] = true
+            characteristic.writeValue(value, completionHandler: { error in
+                if error != nil {
+                    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
+                        self?.updating[characteristic] = false
+                    })
+                } else {
+                    self.updating[characteristic] = false
+                }
+            })
+        }
+    }
 
     func top(_ colors: [UIColor: CGFloat], number: Int) -> [UIColor] {
         return colors.sorted(by: { $0.1 > $1.1 }).prefix(number).map({ $0.0 })
@@ -126,7 +106,7 @@ private extension HomeManager {
         var diffColors = [UIColor: CGFloat]()
         for components in colors {
             for diffComponents in colors {
-                guard components != diffComponents else {
+                guard components != diffComponents || number == 1 else {
                     break
                 }
                 let diffRed = abs(CGFloat(components[0]) - CGFloat(diffComponents[0]))

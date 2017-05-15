@@ -27,7 +27,7 @@ public class AVPlayerItemHomeOutput: AVPlayerItemVideoOutput {
         displayLink.isPaused = true
     }
 
-    public override func setDelegate(_ delegate: AVPlayerItemOutputPullDelegate?, queue delegateQueue: DispatchQueue?) {
+    public override func setDelegate(_ delegate: AVPlayerItemOutputPullDelegate?, queue delegateQueue: DispatchQueue? = nil) {
         userDelegate = delegate
         userDelegateQueue = delegateQueue
     }
