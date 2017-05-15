@@ -6,4 +6,4 @@ script:
 - xcodebuild -workspace AVPlayerItemHomeOutput.xcworkspace -scheme iOS -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" -configuration Debug -enableCodeCoverage YES clean build test
 
 after_success:
-- bash <(curl -s https://codecov.io/bash) -J 'Example'
+- bash <(curl -s https://codecov.io/bash) -J 'iOS'
