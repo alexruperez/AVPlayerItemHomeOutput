@@ -757,7 +757,6 @@
 				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = tvExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.AVPlayerItemHomeOutput.TVExample;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)TVExample";
 				SDKROOT = appletvos;
@@ -774,7 +773,6 @@
 				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = tvExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.AVPlayerItemHomeOutput.TVExample;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)TVExample";
 				SDKROOT = appletvos;
@@ -897,7 +895,6 @@
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_BUILDER = alexruperez;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -981,7 +978,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_BUILDER = alexruperez;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
