@@ -8,6 +8,7 @@
 
 import AVFoundation
 
+/// The AVPlayerItemHomeOutput lets you coordinate the output of content associated with your HomeKit lightbulbs.
 public class AVPlayerItemHomeOutput: AVPlayerItemVideoOutput {
 
     fileprivate var userDelegate: AVPlayerItemOutputPullDelegate?
@@ -17,6 +18,12 @@ public class AVPlayerItemHomeOutput: AVPlayerItemVideoOutput {
     private let playerItem: AVPlayerItem
     private let colors: UInt
 
+    /**
+    	Returns an instance of AVPlayerItemHomeOutput, initialized with the specified AVPlayerItem and the number of desired colors.
+    	- parameter playerItem: The AVPlayerItem to extract the color information.
+    	- parameter colors: The number of colors to extract and send to your HomeKit lightbulbs.
+    	- returns: An instance of AVPlayerItemHomeOutput.
+     */
     public init(_ playerItem: AVPlayerItem, colors: UInt = 3) {
         self.playerItem = playerItem
         self.colors = colors
