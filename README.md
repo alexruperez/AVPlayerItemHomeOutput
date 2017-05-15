@@ -9,30 +9,30 @@
 [![Build Status](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput.svg?branch=master)](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput)
 [![Code Coverage](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput)
 
-The AVPlayerItemHomeOutput lets you coordinate the output of content associated with your HomeKit lightbulbs.
+The *AVPlayerItemHomeOutput* lets you coordinate the output of content associated with your [*HomeKit*](https://www.apple.com/shop/accessories/all-accessories/homekit) lightbulbs.
 
-In other words, becomes #Ambilight. 😀
+In other words, becomes [*#Ambilight*](https://en.wikipedia.org/wiki/Ambilight). 😀
 
-Works with all [HomeKit](https://www.apple.com/shop/accessories/all-accessories/homekit) (and [HomeBridge](https://github.com/nfarina/homebridge)) compatible lightbulbs.
+Works with all [*HomeKit*](https://developer.apple.com/homekit) (and [*HomeBridge*](https://github.com/nfarina/homebridge)) compatible lightbulbs.
 
-![AVPlayerItemHomeOutput](https://raw.githubusercontent.com/alexruperez/AVPlayerItemHomeOutput/master/AVPlayerItemHomeOutput.gif)
+![*AVPlayerItemHomeOutput*](https://raw.githubusercontent.com/alexruperez/AVPlayerItemHomeOutput/master/AVPlayerItemHomeOutput.gif)
 
 ## Installation
 
-AVPlayerItemHomeOutput is available through [CocoaPods](http://cocoapods.org). To install
+AVPlayerItemHomeOutput is available through [*CocoaPods*](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'AVPlayerItemHomeOutput'
 ```
 
-#### Or you can install it with [Carthage](https://github.com/Carthage/Carthage):
+#### Or you can install it with [*Carthage*](https://github.com/Carthage/Carthage):
 
 ```ogdl
 github "alexruperez/AVPlayerItemHomeOutput"
 ```
 
-#### Or install it with [Swift Package Manager](https://swift.org/package-manager/):
+#### Or install it with [*Swift Package Manager*](https://swift.org/package-manager/):
 
 ```swift
 dependencies: [
@@ -58,7 +58,7 @@ present(playerViewController, animated: true) {
 
 #### Don't forget:
 
-Add NSHomeKitUsageDescription key to your Info.plist to specify the use of HomeKit in your app.
+Add *NSHomeKitUsageDescription* key to your *Info.plist* to specify the use of HomeKit in your app.
 
 ## Etc.
 
@@ -71,4 +71,4 @@ Add NSHomeKitUsageDescription key to your Info.plist to specify the use of HomeK
 
 ## License
 
-AVPlayerItemHomeOutput is available under the MIT license. See the LICENSE file for more info.
+*AVPlayerItemHomeOutput* is available under the MIT license. See the LICENSE file for more info.
