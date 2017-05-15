@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D56BEEF91EC8BB0400B22A1A"
-               BuildableName = "AVPlayerItemHomeOutput.framework"
-               BlueprintName = "watchOS"
+               BlueprintIdentifier = "D56BEED51EC8BAC400B22A1A"
+               BuildableName = "Core"
+               BlueprintName = "Core"
                ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,29 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D56BEEC31EC8B6EB00B22A1A"
-               BuildableName = "AVPlayerItemHomeOutput.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D56BEEF91EC8BB0400B22A1A"
-            BuildableName = "AVPlayerItemHomeOutput.framework"
-            BlueprintName = "watchOS"
-            ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D56BEEF91EC8BB0400B22A1A"
-            BuildableName = "AVPlayerItemHomeOutput.framework"
-            BlueprintName = "watchOS"
+            BlueprintIdentifier = "D56BEED51EC8BAC400B22A1A"
+            BuildableName = "Core"
+            BlueprintName = "Core"
             ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D56BEEF91EC8BB0400B22A1A"
-            BuildableName = "AVPlayerItemHomeOutput.framework"
-            BlueprintName = "watchOS"
+            BlueprintIdentifier = "D56BEED51EC8BAC400B22A1A"
+            BuildableName = "Core"
+            BlueprintName = "Core"
             ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

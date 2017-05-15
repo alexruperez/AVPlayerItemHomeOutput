@@ -29,20 +29,15 @@
 		D56481581EC9B6B800588E33 /* AVPlayerItemHomeOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF071EC8BB1600B22A1A /* AVPlayerItemHomeOutput.framework */; };
 		D56481591EC9B6B800588E33 /* AVPlayerItemHomeOutput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF071EC8BB1600B22A1A /* AVPlayerItemHomeOutput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D56BEF281EC8BBE100B22A1A /* AVPlayerItemHomeOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D56BEF291EC8BBE400B22A1A /* AVPlayerItemHomeOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D56BEF2A1EC8BBE700B22A1A /* AVPlayerItemHomeOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D56BEF2B1EC8BBF700B22A1A /* AVPlayerItemHomeOutputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF221EC8BBCB00B22A1A /* AVPlayerItemHomeOutputTests.swift */; };
 		D56BEF361EC8C31A00B22A1A /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF351EC8C31A00B22A1A /* HomeKit.framework */; };
 		D56BEF381EC8C32200B22A1A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF371EC8C32200B22A1A /* AVFoundation.framework */; };
-		D56BEF3A1EC8C32B00B22A1A /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF391EC8C32B00B22A1A /* HomeKit.framework */; };
-		D56BEF3C1EC8C33300B22A1A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF3B1EC8C33300B22A1A /* AVFoundation.framework */; };
 		D56BEF3E1EC8C33B00B22A1A /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF3D1EC8C33B00B22A1A /* HomeKit.framework */; };
 		D56BEF401EC8C34100B22A1A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56BEF3F1EC8C34100B22A1A /* AVFoundation.framework */; };
 		D56BEF421EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF411EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift */; };
-		D56BEF431EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF411EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift */; };
 		D56BEF441EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF411EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift */; };
 		D56BEF461EC8C4A800B22A1A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF451EC8C4A800B22A1A /* HomeManager.swift */; };
-		D56BEF471EC8C4A800B22A1A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF451EC8C4A800B22A1A /* HomeManager.swift */; };
 		D56BEF481EC8C4A800B22A1A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF451EC8C4A800B22A1A /* HomeManager.swift */; };
 		D56BEF501EC8C70500B22A1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF4F1EC8C70500B22A1A /* AppDelegate.swift */; };
 		D56BEF521EC8C70500B22A1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56BEF511EC8C70500B22A1A /* ViewController.swift */; };
@@ -72,13 +67,6 @@
 			remoteInfo = tvOS;
 		};
 		D56BEF2E1EC8C2DC00B22A1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D56BEEB21EC8B6EB00B22A1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D56BEED51EC8BAC400B22A1A;
-			remoteInfo = Core;
-		};
-		D56BEF301EC8C2E100B22A1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D56BEEB21EC8B6EB00B22A1A /* Project object */;
 			proxyType = 1;
@@ -148,7 +136,6 @@
 		D56481461EC9B3C800588E33 /* AVPlayerItemHomeOutputTVExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPlayerItemHomeOutputTVExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56BEEC41EC8B6EB00B22A1A /* AVPlayerItemHomeOutput.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPlayerItemHomeOutput.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56BEEDE1EC8BAED00B22A1A /* AVPlayerItemHomeOutput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVPlayerItemHomeOutput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D56BEEFA1EC8BB0400B22A1A /* AVPlayerItemHomeOutput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVPlayerItemHomeOutput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56BEF071EC8BB1600B22A1A /* AVPlayerItemHomeOutput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AVPlayerItemHomeOutput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56BEF1F1EC8BBCB00B22A1A /* AVPlayerItemHomeOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerItemHomeOutput.h; sourceTree = "<group>"; };
 		D56BEF201EC8BBCB00B22A1A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,15 +195,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D56BEEF61EC8BB0400B22A1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D56BEF3C1EC8C33300B22A1A /* AVFoundation.framework in Frameworks */,
-				D56BEF3A1EC8C32B00B22A1A /* HomeKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D56BEF031EC8BB1600B22A1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,7 +251,6 @@
 			children = (
 				D56BEEC41EC8B6EB00B22A1A /* AVPlayerItemHomeOutput.xctest */,
 				D56BEEDE1EC8BAED00B22A1A /* AVPlayerItemHomeOutput.framework */,
-				D56BEEFA1EC8BB0400B22A1A /* AVPlayerItemHomeOutput.framework */,
 				D56BEF071EC8BB1600B22A1A /* AVPlayerItemHomeOutput.framework */,
 				D56BEF4D1EC8C70500B22A1A /* AVPlayerItemHomeOutput.app */,
 				D56BEF601EC8C70500B22A1A /* AVPlayerItemHomeOutput.xctest */,
@@ -347,14 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D56BEF281EC8BBE100B22A1A /* AVPlayerItemHomeOutput.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D56BEEF71EC8BB0400B22A1A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D56BEF291EC8BBE400B22A1A /* AVPlayerItemHomeOutput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,25 +410,6 @@
 			name = iOS;
 			productName = iOS;
 			productReference = D56BEEDE1EC8BAED00B22A1A /* AVPlayerItemHomeOutput.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D56BEEF91EC8BB0400B22A1A /* watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D56BEEFF1EC8BB0400B22A1A /* Build configuration list for PBXNativeTarget "watchOS" */;
-			buildPhases = (
-				D56BEEF51EC8BB0400B22A1A /* Sources */,
-				D56BEEF61EC8BB0400B22A1A /* Frameworks */,
-				D56BEEF71EC8BB0400B22A1A /* Headers */,
-				D56BEEF81EC8BB0400B22A1A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D56BEF311EC8C2E100B22A1A /* PBXTargetDependency */,
-			);
-			name = watchOS;
-			productName = watchOS;
-			productReference = D56BEEFA1EC8BB0400B22A1A /* AVPlayerItemHomeOutput.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D56BEF061EC8BB1600B22A1A /* tvOS */ = {
@@ -562,12 +512,6 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
-					D56BEEF91EC8BB0400B22A1A = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Q6BEQCNWYM;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-					};
 					D56BEF061EC8BB1600B22A1A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = Q6BEQCNWYM;
@@ -608,7 +552,6 @@
 				D56BEED51EC8BAC400B22A1A /* Core */,
 				D56BEEC31EC8B6EB00B22A1A /* Tests */,
 				D56BEEDD1EC8BAED00B22A1A /* iOS */,
-				D56BEEF91EC8BB0400B22A1A /* watchOS */,
 				D56BEF061EC8BB1600B22A1A /* tvOS */,
 				D56BEF4C1EC8C70500B22A1A /* Example */,
 				D56BEF5F1EC8C70500B22A1A /* ExampleUITests */,
@@ -644,13 +587,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D56BEEDC1EC8BAED00B22A1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D56BEEF81EC8BB0400B22A1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -718,15 +654,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D56BEEF51EC8BB0400B22A1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D56BEF471EC8C4A800B22A1A /* HomeManager.swift in Sources */,
-				D56BEF431EC8C37100B22A1A /* AVPlayerItemHomeOutput.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D56BEF021EC8BB1600B22A1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -770,11 +697,6 @@
 			isa = PBXTargetDependency;
 			target = D56BEED51EC8BAC400B22A1A /* Core */;
 			targetProxy = D56BEF2E1EC8C2DC00B22A1A /* PBXContainerItemProxy */;
-		};
-		D56BEF311EC8C2E100B22A1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D56BEED51EC8BAC400B22A1A /* Core */;
-			targetProxy = D56BEF301EC8C2E100B22A1A /* PBXContainerItemProxy */;
 		};
 		D56BEF331EC8C2E600B22A1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1111,22 +1033,6 @@
 			};
 			name = Release;
 		};
-		D56BEF001EC8BB0400B22A1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				SDKROOT = watchos;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		D56BEF011EC8BB0400B22A1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				SDKROOT = watchos;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
 		D56BEF191EC8BB1600B22A1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1205,6 +1111,7 @@
 				D564814E1EC9B3C800588E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56481521EC9B3C800588E33 /* Build configuration list for PBXNativeTarget "tvExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -1213,6 +1120,7 @@
 				D56481501EC9B3C800588E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D56BEEB51EC8B6EB00B22A1A /* Build configuration list for PBXProject "AVPlayerItemHomeOutput" */ = {
 			isa = XCConfigurationList;
@@ -1246,15 +1154,6 @@
 			buildConfigurations = (
 				D56BEEF01EC8BAED00B22A1A /* Debug */,
 				D56BEEF11EC8BAED00B22A1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D56BEEFF1EC8BB0400B22A1A /* Build configuration list for PBXNativeTarget "watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D56BEF001EC8BB0400B22A1A /* Debug */,
-				D56BEF011EC8BB0400B22A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

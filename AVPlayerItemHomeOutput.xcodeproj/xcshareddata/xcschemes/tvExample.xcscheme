@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D56481351EC9B3C800588E33"
-               BuildableName = "tvExample.app"
+               BuildableName = "AVPlayerItemHomeOutput.app"
                BlueprintName = "tvExample"
                ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D56481451EC9B3C800588E33"
-               BuildableName = "tvExampleUITests.xctest"
+               BuildableName = "AVPlayerItemHomeOutputTVExampleUITests.xctest"
                BlueprintName = "tvExampleUITests"
                ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D56481351EC9B3C800588E33"
-            BuildableName = "tvExample.app"
+            BuildableName = "AVPlayerItemHomeOutput.app"
             BlueprintName = "tvExample"
             ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D56481351EC9B3C800588E33"
-            BuildableName = "tvExample.app"
+            BuildableName = "AVPlayerItemHomeOutput.app"
             BlueprintName = "tvExample"
             ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D56481351EC9B3C800588E33"
-            BuildableName = "tvExample.app"
+            BuildableName = "AVPlayerItemHomeOutput.app"
             BlueprintName = "tvExample"
             ReferencedContainer = "container:AVPlayerItemHomeOutput.xcodeproj">
          </BuildableReference>
