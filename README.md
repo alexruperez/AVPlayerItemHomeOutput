@@ -10,6 +10,9 @@
 [![Code Coverage](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput)
 
 The AVPlayerItemHomeOutput lets you coordinate the output of content associated with your HomeKit lightbulbs.
+In other words, becomes #Ambilight. 😀
+Works with all [HomeKit](https://www.apple.com/shop/accessories/all-accessories/homekit) (and [HomeBridge](https://github.com/nfarina/homebridge)) compatible lightbulbs.
+
 
 ![AVPlayerItemHomeOutput](https://raw.githubusercontent.com/alexruperez/AVPlayerItemHomeOutput/master/AVPlayerItemHomeOutput.gif)
 
