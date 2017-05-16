@@ -1,3 +1,7 @@
+# Release 0.1.5
+
+- [x] Another CodeBeat refactor.
+
 # Release 0.1.4
 
 - [x] CodeBeat refactor.
