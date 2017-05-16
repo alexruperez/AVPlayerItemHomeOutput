@@ -1,3 +1,7 @@
+# Release 0.1.4
+
+- [x] CodeBeat refactor.
+
 # Release 0.1.3
 
 - [x] Added logo.
@@ -8,4 +12,4 @@
 
 # Release 0.1.0
 
-- [x] First release
+- [x] First release.

@@ -34,12 +34,19 @@ class HomeManager {
             for j in 0..<colors {
                 var bitmap = [UInt8](repeating: 0, count: 4)
                 let context = CIContext()
-                let inputExtent = CIVector(x: (extent.size.width/CGFloat(colors))*CGFloat(i), y: (extent.size.height/CGFloat(colors))*CGFloat(j), z: extent.size.width/CGFloat(colors), w: extent.size.height/CGFloat(colors))
-                let filter = CIFilter(name: "CIAreaAverage", withInputParameters: [kCIInputImageKey: image, kCIInputExtentKey: inputExtent])!
-                let outputImage = filter.outputImage!
+                let x = (extent.size.width / CGFloat(colors)) * CGFloat(i)
+                let y = (extent.size.height / CGFloat(colors)) * CGFloat(j)
+                let width = extent.size.width / CGFloat(colors)
+                let height = extent.size.height / CGFloat(colors)
+                let inputExtent = CIVector(x: x, y: y, z: width, w: height)
+                let inputParameters = [kCIInputImageKey: image, kCIInputExtentKey: inputExtent]
+                guard let filter = CIFilter(name: "CIAreaAverage", withInputParameters: inputParameters), let outputImage = filter.outputImage else {
+                    break
+                }
                 let outputExtent = outputImage.extent
                 assert(outputExtent.size.width == 1 && outputExtent.size.height == 1)
-                context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: kCIFormatRGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
+                let bounds = CGRect(x: 0, y: 0, width: 1, height: 1)
+                context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: bounds, format: kCIFormatRGBA8, colorSpace: CGColorSpaceCreateDeviceRGB())
                 samples.append(bitmap)
             }
         }
@@ -52,8 +59,9 @@ class HomeManager {
         }
         var colorIndex = 0
         for lightbulbService in lightbulbServices {
+            let color = colors[colorIndex % colors.count]
             var HSBA = [CGFloat](repeating: 0, count: 4)
-            colors[colorIndex % colors.count].getHue(&HSBA[0], saturation: &HSBA[1], brightness: &HSBA[2], alpha: &HSBA[3])
+            color.getHue(&HSBA[0], saturation: &HSBA[1], brightness: &HSBA[2], alpha: &HSBA[3])
             for characteristic in lightbulbService.characteristics {
                 if updating[characteristic] == nil {
                     updating[characteristic] = false
@@ -61,17 +69,17 @@ class HomeManager {
                 guard updating[characteristic] == false else {
                     break
                 }
-                if characteristic.characteristicType == HMCharacteristicTypePowerState {
-                    update(characteristic, floatValue: 1)
-                }
-                if characteristic.characteristicType == HMCharacteristicTypeBrightness {
-                    update(characteristic, floatValue: Float(HSBA[2]))
-                }
-                if characteristic.characteristicType == HMCharacteristicTypeSaturation {
-                    update(characteristic, floatValue: Float(HSBA[1]))
-                }
-                if characteristic.characteristicType == HMCharacteristicTypeHue {
-                    update(characteristic, floatValue: Float(HSBA[0]))
+                switch characteristic.characteristicType {
+                    case HMCharacteristicTypePowerState:
+                        update(characteristic, floatValue: 1)
+                    case HMCharacteristicTypeBrightness:
+                        update(characteristic, floatValue: Float(HSBA[2]))
+                    case HMCharacteristicTypeSaturation:
+                        update(characteristic, floatValue: Float(HSBA[1]))
+                    case HMCharacteristicTypeHue:
+                        update(characteristic, floatValue: Float(HSBA[0]))
+                    default:
+                        break
                 }
             }
             colorIndex += 1
@@ -88,7 +96,8 @@ extension HomeManager {
             updating[characteristic] = true
             characteristic.writeValue(value, completionHandler: { error in
                 if error != nil {
-                    DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1), execute: { [weak self] in
+                    let deadline: DispatchTime = .now() + .seconds(1)
+                    DispatchQueue.global().asyncAfter(deadline: deadline, execute: { [weak self] in
                         self?.updating[characteristic] = false
                     })
                 } else {
@@ -112,7 +121,11 @@ extension HomeManager {
                 let diffRed = abs(CGFloat(components[0]) - CGFloat(diffComponents[0]))
                 let diffGreen = abs(CGFloat(components[1]) - CGFloat(diffComponents[1]))
                 let diffBlue = abs(CGFloat(components[2]) - CGFloat(diffComponents[2]))
-                let color = UIColor(red: CGFloat(components[0]) / 255.0, green: CGFloat(components[1]) / 255.0, blue: CGFloat(components[2]) / 255.0, alpha: CGFloat(components[3]) / 255.0)
+                let red = CGFloat(components[0]) / 255
+                let green = CGFloat(components[1]) / 255
+                let blue = CGFloat(components[2]) / 255
+                let alpha = CGFloat(components[3]) / 255
+                let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
                 diffColors[color] = (diffColors[color] ?? 0) + diffRed + diffGreen + diffBlue
             }
         }

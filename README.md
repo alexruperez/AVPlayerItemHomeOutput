@@ -8,6 +8,7 @@
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput.svg?branch=master)](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput)
 [![Code Coverage](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput)
+[![codebeat badge](https://codebeat.co/badges/f724bedf-023f-45a0-b854-d2e864561f7a)](https://codebeat.co/projects/github-com-alexruperez-avplayeritemhomeoutput-master)
 
 ![*AVPlayerItemHomeOutput*](https://raw.githubusercontent.com/alexruperez/AVPlayerItemHomeOutput/master/AVPlayerItemHomeOutput.jpg)
 
