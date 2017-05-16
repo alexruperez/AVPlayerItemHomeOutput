@@ -9,6 +9,8 @@
 [![Build Status](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput.svg?branch=master)](https://travis-ci.org/alexruperez/AVPlayerItemHomeOutput)
 [![Code Coverage](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput/branch/master/graph/badge.svg)](https://codecov.io/gh/alexruperez/AVPlayerItemHomeOutput)
 
+![*AVPlayerItemHomeOutput*](https://raw.githubusercontent.com/alexruperez/AVPlayerItemHomeOutput/master/AVPlayerItemHomeOutput.jpg)
+
 The *AVPlayerItemHomeOutput* lets you coordinate the output of content associated with your [*HomeKit*](https://www.apple.com/shop/accessories/all-accessories/homekit) lightbulbs.
 
 In other words, becomes [*#Ambilight*](https://en.wikipedia.org/wiki/Ambilight). 😀
